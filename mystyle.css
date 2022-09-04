@@ -1,0 +1,91 @@
+*{
+    font-family: 'Inconsolata', monospace;
+}
+
+body{
+    background-color: #F5F5DC;
+    min-height: 50vh;
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color:  #DEB887;
+    max-width: 250px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    border-radius: 10px;
+    user-select: none;
+}
+
+#Display-area{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2,minmax(40px,auto));
+    word-wrap: break-word;
+    padding-bottom: 10px;
+    border-bottom: 2px #8B4513 solid;
+}
+
+#Display-area .currentInput{
+    /* display: flex; */
+    text-align: right;
+    height: 8vh;
+    color: black;
+    font-size: xx-large;
+    line-height: 2;
+    word-wrap: break-word;
+}
+
+#Display-area .showResult{
+    text-align: right;
+    color: black;
+    height: 7px;
+    line-height: 3;
+    font-size:larger;  
+}
+
+.Keypad-btns{
+    display: grid;
+    grid: repeat(5,40px)/repeat(4,40px);
+    grid-row-gap: 20px;
+    grid-column-gap:20px ;
+    margin-top: 10px;
+}
+
+.Keypad-btns button{
+    outline: none;
+    border: none;
+    border-radius: 100px;
+    background-color: #FFEFD5;
+    color: black;
+    font-size: large;
+}
+
+.Keypad-btns .func-btn{
+    color: black;
+    background-color: #CD853F;
+    font-weight: bold;
+}
+
+.num-btn:hover{
+    background-color: #DEB887;
+}
+
+.func-btn:hover{
+    background-color: #F5DEB3;
+}
+
+@media only screen and (max-width:300px){
+    body{
+        background-color: #131313;
+        align-items: flex-start;
+    }
+}
